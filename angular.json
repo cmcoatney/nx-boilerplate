@@ -3,6 +3,10 @@
   "projects": {
     "api": "apps/api",
     "api-data-access": "libs/api/data-access",
+    "api-feature-auth": "libs/api/feature-auth",
+    "api-feature-comment": "libs/api/feature-comment",
+    "api-feature-post": "libs/api/feature-post",
+    "api-feature-profile": "libs/api/feature-profile",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }

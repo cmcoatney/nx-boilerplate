@@ -1,0 +1,22 @@
+{
+  "root": "libs/api/feature-post",
+  "sourceRoot": "libs/api/feature-post/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/feature-post/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/feature-post"],
+      "options": {
+        "jestConfig": "libs/api/feature-post/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

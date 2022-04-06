@@ -1,0 +1,22 @@
+{
+  "root": "libs/api/feature-profile",
+  "sourceRoot": "libs/api/feature-profile/src",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/api/feature-profile/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/api/feature-profile"],
+      "options": {
+        "jestConfig": "libs/api/feature-profile/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
