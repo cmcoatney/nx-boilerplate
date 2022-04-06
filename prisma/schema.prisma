@@ -16,7 +16,7 @@ model Post {
   updatedAt DateTime          @updatedAt
   title     String            @db.VarChar(255)
   content   String?
-  published PublicationStatus     @default(Draft)
+  published PublicationStatus @default(Draft)
   author    User              @relation(fields: [authorId], references: [id])
   authorId  Int
 }
