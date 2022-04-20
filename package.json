@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
+    "@apollo/client": "^3.0.0",
     "@nestjs/apollo": "^10.0.9",
     "@nestjs/common": "^8.0.0",
     "@nestjs/core": "^8.0.0",
@@ -35,8 +36,7 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.4.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.4",
-    "@apollo/client": "^3.0.0"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.2.0",
@@ -46,6 +46,7 @@
     "@angular/cli": "~13.2.0",
     "@angular/compiler-cli": "~13.2.0",
     "@angular/language-service": "~13.2.0",
+    "@graphql-codegen/cli": "^2.6.2",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/testing": "^8.0.0",
     "@nrwl/cli": "13.9.6",
