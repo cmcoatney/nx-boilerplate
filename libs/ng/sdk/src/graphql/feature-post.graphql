@@ -1,0 +1,10 @@
+query Posts {
+  posts {
+    id
+    content
+    author {
+      id
+      email
+    }
+  }
+}
