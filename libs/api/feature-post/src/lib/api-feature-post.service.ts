@@ -11,6 +11,8 @@ export class ApiFeaturePostService {
   constructor(private readonly data: ApiDataAccessService) {}
 
   async posts(): Promise<Post[]> {
-    return this.data.post.findMany({ include: { author: true } })
+    return this.data.post.findMany({
+      include: { author: true, comments: { include: { author: true } } },
+    })
   }
 }

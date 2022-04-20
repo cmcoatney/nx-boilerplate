@@ -17,8 +17,20 @@ model Post {
   title     String            @db.VarChar(255)
   content   String?
   published PublicationStatus @default(Draft)
-  author    User              @relation("User_HasMany_Post", fields: [authorId], references: [id])
-  authorId  Int
+  author    User?             @relation(fields: [authorId], references: [id])
+  authorId  Int?
+  comments  Comment[]
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  content   String?
+  post      Post     @relation(fields: [postId], references: [id])
+  postId    Int
+  author    User?    @relation(fields: [authorId], references: [id])
+  authorId  Int?
 }
 
 model Profile {
@@ -32,15 +44,16 @@ model Profile {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  email     String   @unique
-  username  String   @unique
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  email     String    @unique
+  username  String    @unique
   name      String?
-  role      Role     @default(User)
-  posts     Post[]   @relation("User_HasMany_Post")
+  role      Role      @default(User)
   profile   Profile?
+  posts     Post[]
+  comments  Comment[]
 }
 
 enum Role {

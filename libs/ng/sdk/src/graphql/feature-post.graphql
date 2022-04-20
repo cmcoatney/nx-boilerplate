@@ -6,5 +6,12 @@ query Posts {
       id
       email
     }
+    comments {
+      id
+      content
+      author {
+        id
+      }
+    }
   }
 }

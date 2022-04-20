@@ -18,9 +18,20 @@ export type Scalars = {
   DateTime: any;
 };
 
+export type Comment = {
+  __typename?: 'Comment';
+  author?: Maybe<User>;
+  content?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['DateTime']>;
+  id?: Maybe<Scalars['Float']>;
+  title?: Maybe<Scalars['String']>;
+  updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
 export type Post = {
   __typename?: 'Post';
   author?: Maybe<User>;
+  comments?: Maybe<Array<Comment>>;
   content?: Maybe<Scalars['String']>;
   createdAt?: Maybe<Scalars['DateTime']>;
   id?: Maybe<Scalars['Float']>;
@@ -46,7 +57,7 @@ export type User = {
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type PostsQuery = { __typename?: 'Query', posts?: Array<{ __typename?: 'Post', id?: number | null, content?: string | null, author?: { __typename?: 'User', id?: number | null, email?: string | null } | null }> | null };
+export type PostsQuery = { __typename?: 'Query', posts?: Array<{ __typename?: 'Post', id?: number | null, content?: string | null, author?: { __typename?: 'User', id?: number | null, email?: string | null } | null, comments?: Array<{ __typename?: 'Comment', id?: number | null, content?: string | null, author?: { __typename?: 'User', id?: number | null } | null }> | null }> | null };
 
 export const PostsDocument = gql`
     query Posts {
@@ -56,6 +67,13 @@ export const PostsDocument = gql`
     author {
       id
       email
+    }
+    comments {
+      id
+      content
+      author {
+        id
+      }
     }
   }
 }

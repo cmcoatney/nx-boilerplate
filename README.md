@@ -12,6 +12,15 @@
 - [] Auth lib api
 - [] Auth Angular
 
+1. Modify prisma schema
+2. npx prisma format
+3. npx prisma db push
+4. Adjust NestJS GraphQL Model to switch Prisma Schema
+5. Update query if needed (DataAccessService)
+6. Use include to join tables as needed
+7. update graphql query on client side
+8. re-run yarn sdk to refenerate ApolloSDK stuff
+
 # Nxws
 
 This project was generated using [Nx](https://nx.dev).

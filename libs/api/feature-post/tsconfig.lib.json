@@ -6,6 +6,6 @@
     "types": [],
     "target": "es6"
   },
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "../feature-comment/src/lib/models/comment.model.ts"],
   "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }
