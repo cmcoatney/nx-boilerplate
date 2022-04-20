@@ -1,5 +1,6 @@
 import {ObjectType, Field } from '@nestjs/graphql'
 
+// TODO: recommended implement base class
 @ObjectType()
 export class User {
   @Field({ nullable: true})

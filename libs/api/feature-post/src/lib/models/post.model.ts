@@ -1,6 +1,7 @@
 import { Field, ObjectType } from '@nestjs/graphql'
 import { User } from '@nxws-data-access/auth'
 
+// TODO: recommended implement base class
 @ObjectType()
 export class Post {
 
