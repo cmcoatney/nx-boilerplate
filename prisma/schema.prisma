@@ -17,7 +17,7 @@ model Post {
   title     String            @db.VarChar(255)
   content   String?
   published PublicationStatus @default(Draft)
-  author    User              @relation(fields: [authorId], references: [id])
+  author    User              @relation("User_HasMany_Post", fields: [authorId], references: [id])
   authorId  Int
 }
 
@@ -39,7 +39,7 @@ model User {
   username  String   @unique
   name      String?
   role      Role     @default(User)
-  posts     Post[]
+  posts     Post[]   @relation("User_HasMany_Post")
   profile   Profile?
 }
 

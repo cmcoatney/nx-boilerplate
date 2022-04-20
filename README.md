@@ -2,6 +2,19 @@
 
 This project was generated using [Nx](https://nx.dev).
 
+# PRISMA
+
+Prisma is a powerful tool. Not only does it generate code (client and schema) for you but it allows you to build your own generators. A generator can be useful for, say, generating an Angular auth frontend etc...
+
+# Some code duplication --> Bring fields from Prisma Client as models
+
+node_modules/.prisma/client/index.d.ts
+
+Code First schema
+write schema
+generates changes in postgres and generates a client
+prisma handles migrations
+
 ## Quick Start
 
 ### Serve Backend
@@ -16,6 +29,8 @@ nx run api:serve
 ### Prisma Studio
 
 ```zsh
+npx prisma format
+npx prisma db push
  yarn prisma studio
 ```
 
@@ -101,3 +116,6 @@ Nx Cloud pairs with Nx in order to enable you to build and test code more rapidl
 Teams using Nx gain the advantage of building full-stack applications with their preferred framework alongside Nx’s advanced code generation and project dependency graph, plus a unified experience for both frontend and backend developers.
 
 Visit [Nx Cloud](https://nx.app/) to learn more.
+
+
+https://www.youtube.com/watch?v=VS1Z8JcrVe4
