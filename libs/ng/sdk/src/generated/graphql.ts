@@ -65,8 +65,8 @@ export const PostsDocument = gql`
     providedIn: 'root'
   })
   export class PostsGQL extends Apollo.Query<PostsQuery, PostsQueryVariables> {
-    document = PostsDocument;
-    
+    override document = PostsDocument;
+
     constructor(apollo: Apollo.Apollo) {
       super(apollo);
     }
@@ -83,11 +83,11 @@ export const PostsDocument = gql`
     constructor(
       private postsGql: PostsGQL
     ) {}
-      
+
     posts(variables?: PostsQueryVariables, options?: QueryOptionsAlone<PostsQueryVariables>) {
       return this.postsGql.fetch(variables, options)
     }
-    
+
     postsWatch(variables?: PostsQueryVariables, options?: WatchQueryOptionsAlone<PostsQueryVariables>) {
       return this.postsGql.watch(variables, options)
     }
