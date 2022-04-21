@@ -1,0 +1,23 @@
+{
+  "projectType": "library",
+  "root": "libs/ng/material",
+  "sourceRoot": "libs/ng/material/src",
+  "prefix": "nxws",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ng/material"],
+      "options": {
+        "jestConfig": "libs/ng/material/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/ng/material/src/**/*.ts", "libs/ng/material/src/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

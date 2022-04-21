@@ -7,7 +7,10 @@
     "api-feature-comment": "libs/api/feature-comment",
     "api-feature-post": "libs/api/feature-post",
     "api-feature-profile": "libs/api/feature-profile",
+    "ng-material": "libs/ng/material",
     "ng-sdk": "libs/ng/sdk",
+    "ng-state": "libs/ng/state",
+    "ng-ui": "libs/ng/ui",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   }
