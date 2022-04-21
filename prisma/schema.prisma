@@ -50,6 +50,7 @@ model User {
   email     String    @unique
   username  String    @unique
   name      String?
+  password  String
   role      Role      @default(User)
   profile   Profile?
   posts     Post[]
