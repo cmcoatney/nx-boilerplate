@@ -4,14 +4,20 @@
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["libs/api/feature-comment/**/*.ts"]
+        "lintFilePatterns": [
+          "libs/api/feature-comment/**/*.ts"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/api/feature-comment"],
+      "outputs": [
+        "coverage/libs/api/feature-comment"
+      ],
       "options": {
         "jestConfig": "libs/api/feature-comment/jest.config.js",
         "passWithNoTests": true
