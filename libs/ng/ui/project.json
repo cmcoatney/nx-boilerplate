@@ -17,6 +17,39 @@
       "options": {
         "lintFilePatterns": ["libs/ng/ui/src/**/*.ts", "libs/ng/ui/src/**/*.html"]
       }
+    },
+    "storybook": {
+      "executor": "@nrwl/storybook:storybook",
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "port": 4400,
+        "config": {
+          "configFolder": "libs/ng/ui/.storybook"
+        },
+        "projectBuildConfig": "ng-ui:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@nrwl/storybook:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "uiFramework": "@storybook/angular",
+        "outputPath": "dist/storybook/ng-ui",
+        "config": {
+          "configFolder": "libs/ng/ui/.storybook"
+        },
+        "projectBuildConfig": "ng-ui:build-storybook"
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
     }
   },
   "tags": []

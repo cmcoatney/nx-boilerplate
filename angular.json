@@ -11,6 +11,7 @@
     "ng-sdk": "libs/ng/sdk",
     "ng-state": "libs/ng/state",
     "ng-ui": "libs/ng/ui",
+    "ng-ui-e2e": "apps/ng-ui-e2e",
     "shared-util": "libs/shared/util",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
