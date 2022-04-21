@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common'
+import { BadRequestException, Injectable } from '@nestjs/common'
 
 import { ApiDataAccessService } from '@nxws-data-access';
 import { AuthLoginInput } from './dto/auth-login.input';
@@ -10,5 +10,10 @@ export class ApiFeatureAuthService {
 
   public login(input: AuthLoginInput): void {}
 
-  public register(input: AuthRegisterInput): void {}
+  public async register(input: AuthRegisterInput) {
+    const found = await this.data.findUserByEmail(input.email)
+    if(found){
+      throw new BadRequestException(`Cannot register with email ${input.email}`);
+    }
+  }
 }

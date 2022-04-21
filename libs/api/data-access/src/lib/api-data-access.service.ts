@@ -7,13 +7,14 @@ export class ApiDataAccessService extends PrismaClient implements OnModuleInit, 
    */
   constructor() {
     super()
-
-    // TODO: Remove this line when begin development
-    this.findUserByUsername('matthewc').then(console.log)
   }
 
   async findUserByUsername(username: string) {
     return this.user.findUnique({ where: { username: username } })
+  }
+
+  async findUserByEmail(email: string) {
+    return this.user.findUnique({ where: { email: email } })
   }
 
   async onModuleInit(): Promise<void> {
