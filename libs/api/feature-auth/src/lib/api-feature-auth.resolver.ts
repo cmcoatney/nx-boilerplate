@@ -1,11 +1,12 @@
 import { Args, Mutation, Resolver } from '@nestjs/graphql'
 
+import { ApiFeatureAuthService } from './api-feature-auth.service'
 import { AuthLoginInput } from './dto/auth-login.input'
 import { AuthRegisterInput } from './dto/auth-register.input'
 
 @Resolver()
 export class AuthResolver {
-  constructor(private readonly service: AuthService){}
+  constructor(private readonly service: ApiFeatureAuthService){}
 
   @Mutation()
   login(@Args('input') input: AuthLoginInput) {
