@@ -23,7 +23,8 @@
       "@nxws-material": ["libs/ng/material/src/index.ts"],
       "@nxws-ng-sdk": ["libs/ng/sdk/src/index.ts"],
       "@nxws-ngrx": ["libs/ng/state/src/index.ts"],
-      "@nxws-ui": ["libs/ng/ui/src/index.ts"]
+      "@nxws-ui": ["libs/ng/ui/src/index.ts"],
+      "@nxws/shared/util": ["libs/shared/util/src/index.ts"]
     },
     "allowSyntheticDefaultImports": true
   },
