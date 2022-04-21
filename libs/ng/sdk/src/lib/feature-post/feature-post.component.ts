@@ -10,7 +10,10 @@ import { map } from 'rxjs'
   styleUrls: ['./feature-post.component.scss'],
 })
 export class FeaturePostComponent {
-  posts$ = this.sdk.posts().pipe(map(result => result.data.posts))
+  // FACADE Pattern: Decouple data logic from UI by delegating
+
+  // TODO: Refactor into NGRX Facade
+  posts$ = this.sdk.posts().pipe(map((result) => result.data.posts))
 
   constructor(private readonly sdk: ApolloAngularSDK) {}
 }

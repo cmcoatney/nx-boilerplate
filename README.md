@@ -105,3 +105,10 @@ Angular Concepts:
 . server communication and state management should be decoupled
 . data models should be decoupled especially inside of a monorepo with client and API projects 
 . No unessessary/premature optimization: Refactor through promotion
+
+1. Facade Pattern
+# Roadmap...
+Production Grade Angular @The Facade Pattern
+NGRX
+RXJS
+ /
