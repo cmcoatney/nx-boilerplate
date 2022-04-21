@@ -7,7 +7,7 @@ import { AppService } from './app.service'
 
 import { ApiFeaturePostModule } from '@nxws-data-access/post'
 import { ApiFeatureAuthModule } from '@nxws-data-access/auth'
-import { ApiCoreModule } from '@nxws-api/core' //'libs/api/core/src/lib/api-core.module'
+import { ApiCoreModule } from '@nxws-api/core' 
 
 
 @Module({

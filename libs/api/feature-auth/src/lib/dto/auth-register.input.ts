@@ -5,12 +5,12 @@ export class AuthRegisterInput {
   @Field()
   email: string
 
-  @Field({ nullable: true})
+  @Field({ nullable: true })
   password: string
 
-  @Field({ nullable: true})
+  @Field({ nullable: true })
   name?: string
 
-  @Field()
+  @Field({ nullable: true })
   username?: string
 }
