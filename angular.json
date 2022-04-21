@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "api-core": "libs/api/core",
     "api-data-access": "libs/api/data-access",
     "api-feature-auth": "libs/api/feature-auth",
     "api-feature-comment": "libs/api/feature-comment",

@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nxws-api/core": ["libs/api/core/src/index.ts"],
       "@nxws-data-access": ["libs/api/data-access/src/index.ts"],
       "@nxws-data-access/auth": ["libs/api/feature-auth/src/index.ts"],
       "@nxws-data-access/comment": ["libs/api/feature-comment/src/index.ts"],
