@@ -11,6 +11,7 @@ import { ApiFeatureAuthModule } from '@nxws-data-access/auth'
 @Module({
   imports: [
     GraphQLModule.forRoot<ApolloDriverConfig>({ driver: ApolloDriver, autoSchemaFile: true }),
+    
     ApiFeaturePostModule,
     ApiFeatureAuthModule,
 
