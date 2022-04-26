@@ -85,6 +85,7 @@ Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
 Run `nx graph` to see a diagram of the dependencies of your projects.
 
+PANNG STACK RESOURCES:
 https://www.youtube.com/watch?v=VS1Z8JcrVe4
 
 Angular Concepts:
