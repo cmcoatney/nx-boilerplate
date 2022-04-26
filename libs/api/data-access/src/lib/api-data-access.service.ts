@@ -17,6 +17,10 @@ export class ApiDataAccessService extends PrismaClient implements OnModuleInit, 
     return this.user.findUnique({ where: { email: email } })
   }
 
+  async findUserById(userId: number) {
+     return this.user.findUnique({ where: { id: userId } })
+  }
+
   async onModuleInit(): Promise<void> {
     await this.$connect()
   }

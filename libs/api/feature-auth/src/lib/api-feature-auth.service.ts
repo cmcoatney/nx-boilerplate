@@ -1,14 +1,18 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common'
+import { JwtService } from '@nestjs/jwt'
 
 import { ApiDataAccessService } from '@nxws-data-access'
 import { AuthHelper } from '@nxws/shared/util'
+
 import { AuthLoginInput } from './dto/auth-login.input'
 import { AuthRegisterInput } from './dto/auth-register.input'
+import { JwtDto } from './dto/jwt.dto'
 import { UserToken } from './models/user-token'
+import { User } from './models/user.model'
 
 @Injectable()
 export class ApiFeatureAuthService {
-  constructor(private readonly data: ApiDataAccessService) {}
+  constructor(private readonly data: ApiDataAccessService, private readonly jwt: JwtService) {}
 
   public async login(input: AuthLoginInput): Promise<UserToken> {
     const found = await this.data.findUserByEmail(input.email)
@@ -45,6 +49,13 @@ export class ApiFeatureAuthService {
   }
 
   signToken(id: number): string {
-    return ' TEMP TOKEN FOR ID ' + id
+    const payload: JwtDto = { userId: id }
+    
+    return this.jwt.sign(payload)
+  }
+
+  validateUser(userId: number) : Promise<User> {
+    // user expired?
+    return this.data.findUserById(userId)
   }
 }
