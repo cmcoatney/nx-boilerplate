@@ -104,12 +104,16 @@ Angular Concepts:
 . Facades are effective delegation layer between components and the rest of the app
 . Facades are for delegation only
 . server communication and state management should be decoupled
-. data models should be decoupled especially inside of a monorepo with client and API projects 
+. data models should be decoupled especially inside of a monorepo with client and API projects
 . No unessessary/premature optimization: Refactor through promotion
 
 1. Facade Pattern
+
 # Roadmap...
+
 Production Grade Angular @The Facade Pattern
 NGRX
 RXJS
- /
+
+How to Structure your Angular apps like a Googler
+https://www.youtube.com/watch?v=7SDpTOLeqHE
