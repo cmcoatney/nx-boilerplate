@@ -115,5 +115,4 @@ Production Grade Angular @The Facade Pattern
 NGRX
 RXJS
 
-How to Structure your Angular apps like a Googler
-https://www.youtube.com/watch?v=7SDpTOLeqHE
+
