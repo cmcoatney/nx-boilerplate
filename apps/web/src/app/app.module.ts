@@ -10,7 +10,8 @@ import { StoreModule } from '@ngrx/store'
 import { NgStateModule, ngStateRoutes } from '@nxws-ngrx'
 import { NgMaterialModule } from '@nxws-material'
 
-import { FeaturePostComponentModule } from '@nxws-ng-sdk'
+import { FeaturePostComponentModule } from '@nxws-ng-sdk';
+import { PostsModule } from './posts/posts.module'
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -22,6 +23,7 @@ import { FeaturePostComponentModule } from '@nxws-ng-sdk'
     NgStateModule,
     NgMaterialModule,
     FeaturePostComponentModule,
+    PostsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
