@@ -1,12 +1,14 @@
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { PostCardComponent } from './post-card.component';
 
+import { NgMaterialModule } from '@nxws-material';
+
 export default {
   title: 'PostCardComponent',
   component: PostCardComponent,
   decorators: [
     moduleMetadata({
-      imports: [],
+      imports: [NgMaterialModule],
     })
   ],
 } as Meta<PostCardComponent>;

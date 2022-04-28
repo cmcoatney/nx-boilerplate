@@ -9,7 +9,8 @@
     "serve:web": "nx serve",
     "build": "nx build",
     "test": "nx test --code-coverage",
-    "test:stories": "nx run ng-ui:storybook",
+    "stories:ui": "nx run ng-ui:storybook",
+    "stories:web": "nx run web:storybook",
     "test:e2e": "nx run web-e2e:e2e --watch",
     "studio": "npx prisma studio",
     "sdk": "graphql-codegen --config codegen.yml"
