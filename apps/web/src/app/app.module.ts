@@ -10,10 +10,22 @@ import { StoreModule } from '@ngrx/store'
 import { NgStateModule, ngStateRoutes } from '@nxws-ngrx'
 import { NgMaterialModule } from '@nxws-material'
 
-import { FeaturePostComponentModule } from '@nxws-ng-sdk';
 import { PostsModule } from './posts/posts.module'
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component'
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: 'posts',
+    loadChildren: () => import('./posts/posts.module').then((m) => m.PostsModule),
+  },
+]
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     GraphQLModule,
@@ -22,9 +34,10 @@ import { PostsModule } from './posts/posts.module'
     StoreModule.forRoot({}, {}),
     NgStateModule,
     NgMaterialModule,
-    FeaturePostComponentModule,
     PostsModule,
+    RouterModule.forRoot(routes),
   ],
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })

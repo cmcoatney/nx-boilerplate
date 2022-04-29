@@ -4,11 +4,12 @@ import { CommonModule } from '@angular/common';
 import { NgMaterialModule } from '@nxws-material'
 
 import { PostsRoutingModule } from './posts-routing.module';
-import { PostCardComponent } from './ui/post-card/post-card.component';
+import { PostListComponentModule } from './feature/post-list/post-list.module';
 
 
 @NgModule({
-  declarations: [PostCardComponent],
-  imports: [CommonModule, PostsRoutingModule, NgMaterialModule],
+  declarations: [],
+  imports: [CommonModule, PostsRoutingModule, NgMaterialModule, PostListComponentModule],
+  exports: [PostListComponentModule,],
 })
 export class PostsModule {}
