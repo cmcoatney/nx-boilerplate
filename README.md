@@ -119,3 +119,5 @@ RXJS
 # Issues
 - after fixing codegen.yml from port 3333 to 3000 can now run `yarn sdk` but posts$ from sdk is still null 
 
+- RUNNING CODEGEN: After running gen error shown requiring 'override' keyword added to generated code file graphql.ts
+
