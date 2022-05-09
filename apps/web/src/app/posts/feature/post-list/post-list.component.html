@@ -1,4 +1,4 @@
 <pre>{{ posts$ | async | json }}</pre>
-<div>
-  <web-post-card author="Despicable Me"></web-post-card>
+<div *ngFor="let post in posts$ | async">
+  <web-post-card author="post.author" content="post.content"></web-post-card>
 </div>

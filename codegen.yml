@@ -1,5 +1,5 @@
 overwrite: true
-schema: 'http://localhost:3333/graphql'
+schema: 'http://localhost:3000/graphql'
 documents: 'libs/ng/sdk/src/graphql/**/*.graphql'
 generates:
   libs/ng/sdk/src/generated/graphql.ts:

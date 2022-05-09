@@ -18,6 +18,18 @@ export type Scalars = {
   DateTime: any;
 };
 
+export type AuthLoginInput = {
+  email: Scalars['String'];
+  password: Scalars['String'];
+};
+
+export type AuthRegisterInput = {
+  email: Scalars['String'];
+  name?: InputMaybe<Scalars['String']>;
+  password?: InputMaybe<Scalars['String']>;
+  username?: InputMaybe<Scalars['String']>;
+};
+
 export type Comment = {
   __typename?: 'Comment';
   author?: Maybe<User>;
@@ -26,6 +38,22 @@ export type Comment = {
   id?: Maybe<Scalars['Float']>;
   title?: Maybe<Scalars['String']>;
   updatedAt?: Maybe<Scalars['DateTime']>;
+};
+
+export type Mutation = {
+  __typename?: 'Mutation';
+  login: UserToken;
+  register: UserToken;
+};
+
+
+export type MutationLoginArgs = {
+  input: AuthLoginInput;
+};
+
+
+export type MutationRegisterArgs = {
+  input: AuthRegisterInput;
 };
 
 export type Post = {
@@ -52,6 +80,12 @@ export type User = {
   name?: Maybe<Scalars['String']>;
   updatedAt?: Maybe<Scalars['DateTime']>;
   username?: Maybe<Scalars['String']>;
+};
+
+export type UserToken = {
+  __typename?: 'UserToken';
+  token: Scalars['String'];
+  user: User;
 };
 
 export type PostsQueryVariables = Exact<{ [key: string]: never; }>;
