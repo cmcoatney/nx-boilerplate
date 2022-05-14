@@ -121,3 +121,4 @@ RXJS
 
 - RUNNING CODEGEN: After running gen error shown requiring 'override' keyword added to generated code file graphql.ts
 
+- Unknown error displying in console

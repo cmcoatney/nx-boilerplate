@@ -2,7 +2,7 @@ import { Component, NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 
 import { ApolloAngularSDK } from '../../generated/graphql'
-import { map } from 'rxjs'
+import { map, tap } from 'rxjs'
 
 @Component({
   selector: 'nxws-feature-post',
@@ -13,7 +13,7 @@ export class FeaturePostComponent {
   // FACADE Pattern: Decouple data logic from UI by delegating
 
   // TODO: Refactor into NGRX Facade
-  posts$ = this.sdk.posts().pipe(map((result) => result.data.posts))
+  posts$ = this.sdk.posts().pipe(tap((r)=> console.log),map((result) => result.data.posts))
 
   constructor(private readonly sdk: ApolloAngularSDK) {}
 }
