@@ -115,10 +115,63 @@ Production Grade Angular @The Facade Pattern
 NGRX
 RXJS
 
-
 # Issues
-- [x] after fixing codegen.yml from port 3333 to 3000 can now run `yarn sdk` but posts$ from sdk is still null 
+
+- [x] after fixing codegen.yml from port 3333 to 3000 can now run `yarn sdk` but posts$ from sdk is still null
 
 - [ ] RUNNING CODEGEN: After running gen error shown requiring 'override' keyword added to generated code file graphql.ts
 
 - [x] Unknown error displying in console
+
+# Up And Running
+
+The app comes with a built in Development Blog on the main page.
+Also included is basic registration and logging in to an account.
+
+## Generator App
+
+Running the main app...
+
+```zsh
+docker-compose up
+yarn serve:api
+yarn serve:web
+```
+
+## Prisma Studio
+
+```zsh
+yarn studio
+```
+
+To build the GraphQL code after model changes...
+
+```zsh
+yarn sdk
+```
+
+## Storybook
+
+At time of writing the ui lib does not have any stories, and the web stories are not fleshed out.
+
+```zsh
+yarn stories:ui
+
+--- OR ---
+
+yarn stories: web
+```
+
+## Testing
+Unit testing uses Jest out of the box.
+Console receives a code coverage log with testing report when run.
+
+```zsh
+yarn test
+```
+
+ End-To-End Testing uses Cypress...
+
+```zsh
+yarn e2e
+```
